@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ButtonComponent } from './components/button/button.component';
 import { CardComponent } from './components/card/card.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { TableComponent } from './components/table/table.component';
-
+import { FormComponent } from './components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,12 @@ import { TableComponent } from './components/table/table.component';
     CardComponent,
     ModalComponent,
     TableComponent,
+    FormComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
@@ -28,7 +31,8 @@ import { TableComponent } from './components/table/table.component';
     ButtonComponent,
     CardComponent,
     ModalComponent,
-    TableComponent
+    TableComponent,
+    FormComponent
   ]
 })
 export class SharedModule { }
