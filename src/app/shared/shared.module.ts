@@ -9,6 +9,8 @@ import { CardComponent } from './components/card/card.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { TableComponent } from './components/table/table.component';
 import { FormComponent } from './components/form/form.component';
+import { SectionComponent } from './components/section/section.component';
+import { ContainerComponent } from './components/container/container.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { FormComponent } from './components/form/form.component';
     ModalComponent,
     TableComponent,
     FormComponent,
+    SectionComponent,
+    ContainerComponent,
   ],
   imports: [
     CommonModule,
@@ -32,7 +36,9 @@ import { FormComponent } from './components/form/form.component';
     CardComponent,
     ModalComponent,
     TableComponent,
-    FormComponent
+    FormComponent,
+    SectionComponent,
+    ContainerComponent,
   ]
 })
 export class SharedModule { }
