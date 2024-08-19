@@ -1,0 +1,21 @@
+<header>
+  <div class="left">
+    <a *ngFor="let icon of socialIcons" [href]="icon.url" target="_blank" class="social-icon">
+      <i [class]="icon.iconClass"></i>
+    </a>
+  </div>
+  <div class="center">
+    <a routerLink="/home">
+      <img src="assets/slipknot-logo.png" alt="Slipknot Logo">
+    </a>
+  </div>
+  <div class="right">
+    <nav>
+      <ul>
+        <li *ngFor="let link of navLinks">
+          <a [routerLink]="link.path">{{ link.label }}</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
