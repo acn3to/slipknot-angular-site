@@ -1,1 +1,9 @@
-<p>button works!</p>
+<button [type]="type" [ngClass]="color" [disabled]="disabled">
+  <ng-container *ngIf="iconPosition === 'left' && icon">
+    <img [src]="icon" alt="" class="icon">
+  </ng-container>
+  {{ label }}
+  <ng-container *ngIf="iconPosition === 'right' && icon">
+    <img [src]="icon" alt="" class="icon">
+  </ng-container>
+</button>
