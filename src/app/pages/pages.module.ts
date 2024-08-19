@@ -8,6 +8,7 @@ import { VideosComponent } from './videos/videos.component';
 import { NewsComponent } from './news/news.component';
 import { EventsComponent } from './events/events.component';
 import { HomeComponent } from './home/home.component';
+import { SharedModule } from "../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     CommonModule,
-    RouterModule
-  ]
+    RouterModule,
+    SharedModule
+]
 })
 export class PagesModule { }
