@@ -10,7 +10,7 @@ export class FormComponent {
   @Input() placeholder: string = 'Your email';
   @Input() buttonLabel: string = 'Subscribe';
   @Input() buttonType: 'button' | 'submit' | 'reset' = 'submit';
-  @Input() buttonColor: 'primary' | 'secondary' | 'accent' | 'warn' | 'success' = 'primary'; // Removed 'trial'
+  @Input() buttonColor: 'primary' | 'secondary' | 'accent' | 'warn' | 'success' = 'primary';
   @Input() buttonDisabled: boolean = false;
   @Input() buttonIcon?: string;
   @Input() buttonIconPosition: 'left' | 'right' = 'right';

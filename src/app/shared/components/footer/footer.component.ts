@@ -13,8 +13,13 @@ export class FooterComponent {
   ];
 
   currentYear: number = new Date().getFullYear();
+  isModalVisible: boolean = false;
 
-  handleFormSubmit(email: string) {
-    console.log('Newsletter subscription email:', email);
+  openModal() {
+    this.isModalVisible = true;
+  }
+
+  closeModal() {
+    this.isModalVisible = false;
   }
 }

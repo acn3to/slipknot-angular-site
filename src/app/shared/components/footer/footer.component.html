@@ -11,9 +11,9 @@
       </a>
     </div>
     <div class="right">
-      <app-form [title]="'stay tunned!'" [placeholder]="'your email address'" [buttonLabel]="'subscribe now'"
+      <app-form [title]="'stay tuned!'" [placeholder]="'your email address'" [buttonLabel]="'subscribe now'"
         [buttonType]="'submit'" [buttonColor]="'secondary'" [buttonDisabled]="false" [buttonIcon]="''"
-        [buttonIconPosition]="'right'">
+        [buttonIconPosition]="'right'" (submit)="openModal()">
       </app-form>
     </div>
   </div>
@@ -26,4 +26,8 @@
     <div class="footer-bottom-right">
     </div>
   </div>
+
+  <app-modal [title]="'Thank You!'" [message]="'Thank you for subscribing to our newsletter!'"
+    [isVisible]="isModalVisible" (close)="closeModal()">
+  </app-modal>
 </footer>
