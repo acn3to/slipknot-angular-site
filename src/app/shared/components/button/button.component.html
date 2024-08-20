@@ -1,4 +1,4 @@
-<button [type]="type" [ngClass]="color" [disabled]="disabled">
+<button [type]="type" [ngClass]="color" [disabled]="disabled" (click)="onClick()">
   <ng-container *ngIf="iconPosition === 'left' && icon">
     <img [src]="icon" alt="" class="icon">
   </ng-container>

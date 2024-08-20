@@ -20,4 +20,5 @@ export class SectionComponent {
   @Input() buttonIcon?: string;
   @Input() buttonIconPosition: 'left' | 'right' = 'right';
   @Input() contentAlignment: 'center' | 'left' | 'right' = 'center';
+  @Input() buttonRoute?: string;
 }

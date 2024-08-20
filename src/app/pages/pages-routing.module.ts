@@ -6,7 +6,6 @@ import { PhotosComponent } from './photos/photos.component';
 import { VideosComponent } from './videos/videos.component';
 import { NewsComponent } from './news/news.component';
 import { EventsComponent } from './events/events.component';
-import { StoreComponent } from './store/store.component';
 import { ViewportScroller } from '@angular/common';
 import { Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
@@ -18,7 +17,6 @@ const routes: Routes = [
   { path: 'videos', component: VideosComponent },
   { path: 'news', component: NewsComponent },
   { path: 'events', component: EventsComponent },
-  { path: 'store', component: StoreComponent }
 ];
 
 @NgModule({

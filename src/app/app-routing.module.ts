@@ -1,12 +1,16 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes, Scroll } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { ViewportScroller } from '@angular/common';
-import { Router } from '@angular/router';
-import { filter } from 'rxjs/operators';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }
+  { path: '', component: HomeComponent },
+  { path: 'band', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+  { path: 'music', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+  { path: 'photos', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+  { path: 'videos', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+  { path: 'news', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+  { path: 'events', loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule) },
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
@@ -16,18 +20,4 @@ const routes: Routes = [
   })],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-  constructor(router: Router, viewportScroller: ViewportScroller) {
-    router.events.pipe(
-      filter((event): event is Scroll => event instanceof Scroll)
-    ).subscribe(event => {
-      if (event.position) {
-        viewportScroller.scrollToPosition(event.position);
-      } else if (event.anchor) {
-        viewportScroller.scrollToAnchor(event.anchor);
-      } else {
-        viewportScroller.scrollToPosition([0, 0]);
-      }
-    });
-  }
-}
+export class AppRoutingModule { }

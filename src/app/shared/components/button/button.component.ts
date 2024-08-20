@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-button',
@@ -12,4 +13,14 @@ export class ButtonComponent {
   @Input() disabled: boolean = false;
   @Input() icon?: string;
   @Input() iconPosition: 'left' | 'right' = 'right';
+  @Input() route?: string;
+
+  constructor(private router: Router) { }
+
+  onClick() {
+    if (this.route) {
+      console.log(this.route)
+      this.router.navigate([this.route]);
+    }
+  }
 }
