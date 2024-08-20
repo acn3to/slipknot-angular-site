@@ -6,9 +6,9 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./form.component.scss']
 })
 export class FormComponent {
-  @Input() title: string = 'Subscribe to our newsletter';
-  @Input() placeholder: string = 'Your email';
-  @Input() buttonLabel: string = 'Subscribe';
+  @Input() title: string = '';
+  @Input() placeholder: string = '';
+  @Input() buttonLabel: string = 'Submit';
   @Input() buttonType: 'button' | 'submit' | 'reset' = 'submit';
   @Input() buttonColor: 'primary' | 'secondary' | 'accent' | 'warn' | 'success' = 'primary';
   @Input() buttonDisabled: boolean = false;
@@ -16,12 +16,9 @@ export class FormComponent {
   @Input() buttonIconPosition: 'left' | 'right' = 'right';
   @Output() submit = new EventEmitter<string>();
 
-  email: string = '';
+  imageUrl: string = '';
 
   onSubmit() {
-    if (this.email) {
-      this.submit.emit(this.email);
-      this.email = '';
-    }
+    this.submit.emit(this.imageUrl);
   }
 }

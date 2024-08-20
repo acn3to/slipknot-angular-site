@@ -1,0 +1,8 @@
+<div class="modal-overlay" *ngIf="isVisible" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-button" (click)="closeModal()">×</button>
+    <div class="modal-inner">
+      <img [src]="imageSrc" alt="Full Size Image" />
+    </div>
+  </div>
+</div>

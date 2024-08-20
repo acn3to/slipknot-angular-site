@@ -14,6 +14,7 @@ import { ContainerComponent } from './components/container/container.component';
 import { BackgroundImageSectionComponent } from './components/background-image-section/background-image-section.component';
 import { AlbumModalComponent } from './components/album-modal/album-modal.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { PhotoModalComponent } from './components/photo-modal/photo-modal.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     ContainerComponent,
     BackgroundImageSectionComponent,
     AlbumModalComponent,
-    GalleryComponent
+    GalleryComponent,
+    PhotoModalComponent
   ],
   imports: [
     CommonModule,

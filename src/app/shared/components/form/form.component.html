@@ -1,7 +1,7 @@
 <div class="form-container">
   <h2>{{ title }}</h2>
   <form (ngSubmit)="onSubmit()">
-    <input type="email" [(ngModel)]="email" [attr.placeholder]="placeholder" required>
+    <input type="text" [(ngModel)]="imageUrl" [attr.placeholder]="placeholder" name="imageUrl" required />
     <app-button [label]="buttonLabel" [type]="buttonType" [color]="buttonColor" [disabled]="buttonDisabled"
       [icon]="buttonIcon" [iconPosition]="buttonIconPosition">
     </app-button>

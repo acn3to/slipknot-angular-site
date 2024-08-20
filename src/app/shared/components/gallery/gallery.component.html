@@ -1,0 +1,26 @@
+<div class="gallery-container">
+  <div class="controls-container">
+    <h2>PHOTO GALLERY</h2>
+
+    <input type="text" [(ngModel)]="imageUrl" placeholder="Enter image URL" />
+    <app-button label="add image" type="button" color="secondary" (click)="addImage()">
+    </app-button>
+
+    <h2>OR</h2>
+
+    <app-button label="upload image" type="button" color="secondary" buttonIcon="assets/upload.svg"
+      buttonIconPosition="right" (click)="triggerFileInput()">
+    </app-button>
+
+    <input #fileInput type="file" (change)="handleFileInput($event)" style="display: none;" />
+  </div>
+
+  <div class="gallery">
+    <div class="gallery-item" *ngFor="let image of images">
+      <img [src]="image" alt="Gallery Image" (click)="openImageModal(image)" />
+    </div>
+  </div>
+
+  <app-photo-modal [isVisible]="selectedImage !== null" [imageSrc]="selectedImage" (close)="closeModal()">
+  </app-photo-modal>
+</div>
