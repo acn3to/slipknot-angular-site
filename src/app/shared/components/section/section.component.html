@@ -11,6 +11,7 @@
     <div class="section-header" *ngIf="title || subtitle || buttonText">
       <h1 *ngIf="title">{{ title }}</h1>
       <h2 *ngIf="subtitle">{{ subtitle }}</h2>
+      <p *ngIf="text">{{ text }}</p>
       <app-button *ngIf="buttonText" [label]="buttonText" [color]="buttonColor" [disabled]="buttonDisabled"
         [icon]="buttonIcon" [iconPosition]="buttonIconPosition" [route]="buttonRoute"></app-button>
     </div>

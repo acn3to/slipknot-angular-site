@@ -11,6 +11,7 @@ export class SectionComponent {
   @Input() textColor: string = '#FFFFFF';
   @Input() title: string | null = null;
   @Input() subtitle: string | null = null;
+  @Input() text: string | null = null;
   @Input() imageSrc: string | null = null;
   @Input() imageAlt: string = '';
   @Input() buttonText: string | null = null;

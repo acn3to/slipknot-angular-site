@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  width: 30%;
+  width: 40%;
 }
 
 .section-content {
@@ -33,6 +33,12 @@
   align-items: center;
   justify-content: center;
   height: auto;
+}
+
+p {
+  max-width: 300px;
+  margin: 0 auto;
+  line-height: 1.5;
 }
 
 img {
