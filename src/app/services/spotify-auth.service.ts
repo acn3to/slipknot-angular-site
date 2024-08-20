@@ -2,14 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SpotifyAuthService {
-  private clientId = environment.spotifyClientId;
-  private clientSecret = environment.spotifyClientSecret;
+  private clientId = import.meta.env['NG_APP_SPOTIFY_CLIENT_ID'];
+  private clientSecret = import.meta.env['NG_APP_SPOTIFY_CLIENT_SECRET'];
   private redirectUri = 'http://localhost:4200/callback';
   private tokenUrl = 'https://accounts.spotify.com/api/token';
 
