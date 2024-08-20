@@ -1,1 +1,6 @@
-<p>card works!</p>
+<div class="card" (click)="onCardClick()">
+  <img [src]="album.images[0]?.url" alt="Album Image">
+  <h3>{{ album.name }}</h3>
+  <p>Release Date: {{ album.release_date }}</p>
+  <p>Total Tracks: {{ album.total_tracks }}</p>
+</div>

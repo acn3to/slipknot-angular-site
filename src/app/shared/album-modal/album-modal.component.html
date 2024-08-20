@@ -1,0 +1,29 @@
+<div class="modal-overlay" *ngIf="isVisible" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <header>
+      <h2>{{ album?.name || '' }}</h2>
+      <button class="close-button" (click)="closeModal()">×</button>
+    </header>
+
+    <div class="album-details">
+      <img [src]="album?.images[0]?.url" alt="Album Image" />
+      <p>Release Date: {{ album?.release_date || '' }}</p>
+      <p>Total Tracks: {{ album?.total_tracks || 0 }}</p>
+      <ul *ngIf="album?.tracks">
+        <li *ngFor="let track of album.tracks">
+          <span>{{ track.name }}</span>
+          <button (click)="playTrack(track)">
+            <i class="fas fa-play"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    <div *ngIf="currentTrack" class="player">
+      <audio #audioPlayer controls>
+        <source [src]="currentTrack.preview_url" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+</div>

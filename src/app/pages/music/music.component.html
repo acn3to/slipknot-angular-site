@@ -1,1 +1,17 @@
-<p>music works!</p>
+<div class="music-page">
+  <div *ngIf="artistData; else loading">
+    <div *ngIf="albums.length > 0; else noAlbums" class="albums">
+      <app-card *ngFor="let album of albums" [album]="album" (openModal)="onAlbumClick(album)"></app-card>
+    </div>
+    <ng-template #noAlbums>
+      <p>No albums found.</p>
+    </ng-template>
+  </div>
+  <ng-template #loading>
+    <p>Loading...</p>
+  </ng-template>
+  <p *ngIf="error">{{ error }}</p>
+
+  <app-album-modal [isVisible]="selectedAlbum !== null" [album]="selectedAlbum" (close)="closeModal()">
+  </app-album-modal>
+</div>

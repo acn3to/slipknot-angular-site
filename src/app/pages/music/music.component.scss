@@ -1,0 +1,12 @@
+.music-page {
+  background-color: #000000;
+  background-repeat: no-repeat;
+  padding: 200px;
+}
+
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
