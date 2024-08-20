@@ -2,14 +2,17 @@
   'background-color': backgroundColor,
   'background-image': backgroundImage ? 'url(' + backgroundImage + ')' : 'none',
   'color': textColor
-}" class="section-container">
-  <div class="section-inner" [ngClass]="{'reverse-layout': reverse}">
+}" class="section-container" [ngClass]="{
+  'reverse-layout': reverse,
+  'align-left': contentAlignment === 'left',
+  'align-right': contentAlignment === 'right'
+}">
+  <div class="section-inner">
     <div class="section-header" *ngIf="title || subtitle || buttonText">
       <h1 *ngIf="title">{{ title }}</h1>
       <h2 *ngIf="subtitle">{{ subtitle }}</h2>
-      <app-button *ngIf="buttonText" [label]="buttonText" [type]="'button'" [color]="buttonColor"
-        [disabled]="buttonDisabled" [icon]="buttonIcon" [iconPosition]="buttonIconPosition">
-      </app-button>
+      <app-button *ngIf="buttonText" [label]="buttonText" [color]="buttonColor" [disabled]="buttonDisabled"
+        [icon]="buttonIcon" [iconPosition]="buttonIconPosition"></app-button>
     </div>
     <div class="section-content" *ngIf="imageSrc">
       <img [src]="imageSrc" [alt]="imageAlt">
