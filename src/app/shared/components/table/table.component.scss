@@ -1,0 +1,19 @@
+.table-container {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  width: 100%;
+  max-width: 1200px;
+  border-collapse: collapse;
+  margin: 20px 0;
+  color: #ffffff;
+  background-color: #333333;
+
+  th,
+  td {
+    padding: 12px;
+    text-align: left;
+  }
+}

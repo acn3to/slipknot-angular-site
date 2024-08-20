@@ -1,1 +1,21 @@
-<p>table works!</p>
+<table class="table">
+  <thead>
+    <tr>
+      <ng-container *ngFor="let column of columns">
+        <th>{{ column }}</th>
+      </ng-container>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of data">
+      <ng-container *ngFor="let column of columns">
+        <td>{{ row[column] }}</td>
+      </ng-container>
+      <td>
+        <ng-content select="[table-action]"></ng-content>
+      </td>
+    </tr>
+  </tbody>
+</table>
+``
