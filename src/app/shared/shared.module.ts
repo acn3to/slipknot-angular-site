@@ -12,7 +12,8 @@ import { FormComponent } from './components/form/form.component';
 import { SectionComponent } from './components/section/section.component';
 import { ContainerComponent } from './components/container/container.component';
 import { BackgroundImageSectionComponent } from './components/background-image-section/background-image-section.component';
-import { AlbumModalComponent } from './album-modal/album-modal.component';
+import { AlbumModalComponent } from './components/album-modal/album-modal.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AlbumModalComponent } from './album-modal/album-modal.component';
     ContainerComponent,
     BackgroundImageSectionComponent,
     AlbumModalComponent,
+    GalleryComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +46,8 @@ import { AlbumModalComponent } from './album-modal/album-modal.component';
     SectionComponent,
     ContainerComponent,
     BackgroundImageSectionComponent,
-    AlbumModalComponent
+    AlbumModalComponent,
+    GalleryComponent
   ]
 })
 export class SharedModule { }
