@@ -15,6 +15,7 @@ import { BackgroundImageSectionComponent } from './components/background-image-s
 import { AlbumModalComponent } from './components/album-modal/album-modal.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { PhotoModalComponent } from './components/photo-modal/photo-modal.component';
+import { MusicPlayerComponent } from './components/music-player/music-player.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PhotoModalComponent } from './components/photo-modal/photo-modal.compon
     BackgroundImageSectionComponent,
     AlbumModalComponent,
     GalleryComponent,
-    PhotoModalComponent
+    PhotoModalComponent,
+    MusicPlayerComponent
   ],
   imports: [
     CommonModule,
@@ -49,7 +51,8 @@ import { PhotoModalComponent } from './components/photo-modal/photo-modal.compon
     ContainerComponent,
     BackgroundImageSectionComponent,
     AlbumModalComponent,
-    GalleryComponent
+    GalleryComponent,
+    MusicPlayerComponent
   ]
 })
 export class SharedModule { }

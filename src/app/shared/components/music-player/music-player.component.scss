@@ -1,0 +1,20 @@
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 8px;
+  padding: 10px;
+  z-index: 1000;
+
+  .fa-play {
+    font-size: 24px;
+    color: black;
+    transition: color 0.3s ease;
+  }
+
+  .playing .fa-play {
+    color: red;
+  }
+}

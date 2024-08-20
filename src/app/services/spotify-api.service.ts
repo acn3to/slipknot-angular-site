@@ -48,4 +48,17 @@ export class SpotifyApiService {
 
     return this.http.get<any>(`${this.baseUrl}/albums/${albumId}/tracks`, { headers });
   }
+
+  public getTrack(trackId: string): Observable<any> {
+    const accessToken = localStorage.getItem('spotify_token');
+    if (!accessToken) {
+      throw new Error('Access token is missing');
+    }
+
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${accessToken}`,
+    });
+
+    return this.http.get<any>(`${this.baseUrl}/tracks/${trackId}`, { headers });
+  }
 }
